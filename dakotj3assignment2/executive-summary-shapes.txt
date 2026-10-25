@@ -1,0 +1,58 @@
+Assignment name: Assignment 2
+TCSS 305 C: Programming Practicum, Autumn 2026
+Name: Dakota Johnson
+UWNetID: dakotj
+
+  Assignment Overview:
+For this assignment, I built an object-oriented shape hierarchy in Java to gain more experience
+with inheritance, polymorphism, and interface implementation to sharpen my overall coding skills in
+Java. The project centers around an abstract base class, AbstractShape, which defines shared
+behaviors and implements the Comparable interface so shapes can be sorted by name and then by area.
+Four concrete subclasses like Circle, Square, Triangle, and Rectangle extend AbstractShape and
+provide their own specific area calculations to be fully tested in the controller. To keep
+the code clean and modular, I implemented a ShapeFactory class to handle making new shape objects
+separately from the rest of the shape logic. Across the project, I applied the final keyword to
+classes, methods, instance fields, and parameters to lock things down and prevent accidental changes
+or overrides. I also focused heavily on defensive programming by adding input validation in every
+constructor, throwing descriptive IllegalArgumentException errors if any dimensions were zero or
+negative. A separate driver class, ShapeTester, inside a controller package, created 20 shapes
+total—five of each type with intentional duplicates—to verify sorting logic and ensure clean
+console output formatting. Alongside writing the core logic, I wrote comprehensive Javadocs for every
+single class, field, and method. I spent about 10 hours throughout the week and weekend designing,
+implementing, and polishing the project from start to finish. By analyzing the feedback, I achieved
+a zero-warning status across Checkstyle, PMD also I could not get SpotBugs to properly work even
+though it read zero but I kept everything aligned with the UWT SET style guide.
+
+  Technical Impression:
+Thinking about the assignment when it came to writing the actual shape classes and implementing
+their mathematical area calculations was straightforward and easy since the geometry itself
+is basic. The part that ended up taking much more time than I initially expected was putting
+together the test file. Since it had been a while since I last built a test file from scratch
+for an assignment, I felt a bit rusty and had to do some searching online to look up references
+and review the best practices for structuring clean test assertions and avoiding magic numbers
+in Java. However, most of my time and frustration went into dealing with Checkstyle and fixing
+all the endless minor formatting issues. Adding thorough Javadoc comments to every single private
+field and constructor parameter felt tedious and repetitive. Making sure that all local variables,
+fields, and parameters were explicitly marked final required constantly going back and fixing
+missed declarations. Also, constantly wrapping long exception message strings to stay strictly
+under the 95-character limit caused me a lot of formatting issues that ended in trial and error.
+Reordering all the fields, constructors, and methods to fit the exact code organization rules
+mandated by the style guide also required manual refactoring. Running continuous scans helped
+catch everything in the end, and getting all the files down to a completely zero issues felt like
+a huge win once it was finally finished.
+
+  Unresolved problems in my submission:
+All classes compile, run correctly, and pass Checkstyle, PMD, and SpotBugs static analysis
+with zero warnings. Except shape Tester pmd test had an output of suppressed violations so I
+could not figure this out.
+
+  Citations and Collaborations:
+I wrote all the code independently while also utilizing online developer
+discussions (including StackOverflow) to review standard testing assertions and validation
+logic for the test that was made.
+
+  Extra Credit:
+Zero warnings (Checkstyle, PMD, SpotBugs) across the entire project.
+
+  Questions:
+are suppressed violations normal?
